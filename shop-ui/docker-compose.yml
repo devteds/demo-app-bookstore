@@ -1,0 +1,39 @@
+version: "3.4"
+
+services:
+
+  web:
+    build:
+      context: .
+      # target: dev
+      dockerfile: Dockerfile.dev
+    command: npm run dev
+    volumes:
+      - ./:/web
+    depends_on:
+      - api  
+    ports:
+      - 8082:8080  
+  
+  # Backend API DB - Run locally
+  api-db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: bookstore
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: appuser123
+      
+  # Backend API - Run locally. Container port 3000.
+  # Web front-end dev proxy use http://api:3000 for /api/* requests
+  api:
+    image: devteds/demo-bookstore-shopapi:1.0
+    environment:
+      DB_HOST: api-db
+      DB_NAME: bookstore
+      DB_USER: appuser
+      DB_PASSWORD: appuser123
+      RAILS_ENV: production
+      RAILS_LOG_TO_STDOUT: "1"
+    depends_on:
+      - api-db

@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: bookstore
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: password
+    ports:
+      - "3316:3306"
+
+  app:
+    build: .
+    image: devteds/demo-bookstore-shopapi
+    volumes:
+      - .:/app/:rw
+    ports:
+      - "3002:3000"
+    depends_on:
+      - db
+    environment:
+      DB_USER: root
+      DB_NAME: bookstore
+      DB_PASSWORD: password
+      DB_HOST: db
+
+  # # Secrets from individual files on config/app_secret/*
+  # app-prod:
+  #   image: image: devteds/demo-bookstore-shopapi:1.0
+  #   ports:
+  #     - "3012:3000"
+  #   volumes:
+  #     - ./config/app_secret:/app/config/app_secret:ro
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     DB_USER: root
+  #     DB_NAME: bookstore
+  #     DB_HOST: db
+  #     RAILS_ENV: production
+  #     RAILS_LOG_TO_STDOUT: "1"

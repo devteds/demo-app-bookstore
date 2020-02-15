@@ -1,0 +1,5 @@
+FROM node:8.2 as dev
+LABEL maintainer="Chandra Shettigar"
+RUN mkdir /web
+WORKDIR /web
+RUN npm install --global vue-cli

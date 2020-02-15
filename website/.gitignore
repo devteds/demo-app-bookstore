@@ -1,0 +1,6 @@
+/tmp/*
+
+/storage/*
+!/storage/.keep
+
+.byebug_history

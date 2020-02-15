@@ -1,0 +1,27 @@
+<%
+def db_password
+  begin
+    File.read("config/app_secret/DB_PASSWORD").strip
+  rescue Exception => e
+    ENV['DB_PASSWORD']
+  end
+end
+%>
+
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USER'] %>
+  password: <%= db_password  %>
+  host: <%= ENV['DB_HOST'] %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

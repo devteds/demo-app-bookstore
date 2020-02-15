@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Chandra Shettigar @ Devteds">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/bookstore.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <title>Bookstore - Example Containerized Static Webiste</title>
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top " id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="/">Simple Bookstore</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/shop">Shop</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/cart">Cart</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/account">Account</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead bg-primary text-white text-center">
+      <div class="container">
+        
+        <h1 class="mb-0">Start Learning</h1>
+        <hr class="star-light">
+        <h2 class="font-weight-light mb-0">For cloud developers and architects</h2>
+      </div>
+    </header>    
+
+    <section class="top-picks" id="top-picks">
+        <div class="container">
+          <h2 class="text-center text-secondary mb-0">Top Picks</h2>
+          <hr class="star-dark mb-5">
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <a class="top-picks-item d-block mx-auto">
+                <img class="img-fluid" src="img/books/docker.png" alt="">
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <a class="top-picks-item d-block mx-auto">
+                <img class="img-fluid" src="img/books/kubernetes.png" alt="">
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <a class="top-picks-item d-block mx-auto">
+                <img class="img-fluid" src="img/books/rails.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <footer class="footer text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-5 mb-lg-0">
+              <h4 class="mb-4">Links</h4>
+              <p class="lead mb-0">...</p>
+            </div>
+            <div class="col-md-4 mb-5 mb-lg-0">
+              <h4 class="mb-4">Find more at</h4>
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item">
+                  <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/devteds/">
+                    <i class="fab fa-fw fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/devteds">
+                    <i class="fab fa-fw fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.youtube.com/c/ChandraShettigar">
+                    <i class="fab fa-fw fa-youtube"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4 class=" mb-4">About</h4>
+              <p class="lead mb-0">Example containerized (docker) static web application from
+                <a href="https://devteds.com">Devteds</a>.</p>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>Copyright &copy; Simple Bookstore 2020</small>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
