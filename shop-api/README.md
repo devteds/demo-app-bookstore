@@ -7,7 +7,7 @@ docker-compose build
 docker-compose up
 
 # on another terminal window
-docker-compose exec app rails g migrate
+docker-compose exec app rails db:migrate
 
 # open on browser or
 open http://localhost:3002/
